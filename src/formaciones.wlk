@@ -55,7 +55,7 @@ class Formacion{
 	
 	method esEficiente(){
 		
-		return locomotoras.all{ locom => ( locom.arrastreUtil() >= (locom.pesoMaximo() * 5) ) }	
+		return locomotoras.all{ locom => ( locom.arrastreUtil() >= (locom.peso() * 5) ) }	
 		
 	}
 	

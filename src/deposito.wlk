@@ -43,12 +43,15 @@ class Deposito{
 		
 		if(!formacion.puedeMoverse()){
 			
-			if(locomotorasSueltas.any{locom => locom.arrastreUtil() >= formacion.cuantoEmpujeFalta() }){}
+			if( locomotorasSueltas.any{locom => locom.arrastreUtil() >= formacion.cuantoEmpujeFalta() } ){
 			
-				formacion.agregarLocomotora(locom)
+			//Aca hay codigo redundante, trate de mejorarlo usando un metodo pero tuve muchos errores y no me salió
+			
+				formacion.agregarLocomotora(locomotorasSueltas.find{locom => locom.arrastreUtil() >= formacion.cuantoEmpujeFalta() })
+				
 			
 			}
-		
+		}
 		
 	}
 	

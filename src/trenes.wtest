@@ -1,0 +1,32 @@
+import deposito.*
+import formaciones.*
+import locomotoras.*
+import vagones.*
+
+	describe "TESTS Trenes"{
+		
+		var deposito = new Deposito()
+		var formacion = new Formacion()
+		var locomUtil = new Locomotora()
+		var locomInutil = new Locomotora(pesoArrastre = 2000, velMax = 10)
+		var vagonDeCarga = new VagonCarga()
+		var vagonDePasajeros = new VagonPasajeros(largo = 12)
+		
+		
+		test "Agregar locomotora a una formacion desde el deposito funciona"{
+			
+			deposito.agregarFormacion(formacion)
+			deposito.agregarLocomSuelta(locomUtil)
+			formacion.agregarLocomotora(locomInutil)
+			formacion.agregarVagon(vagonDeCarga)
+			
+			assert.notThat(formacion.puedeMoverse())
+			
+			deposito.agregarLocomAFormacion(formacion)
+			
+			assert.that(formacion.puedeMoverse())
+			
+			
+		}
+		
+	}

@@ -2,11 +2,16 @@ import deposito.*
 import formaciones.*
 import locomotoras.*
 import vagones.*
+import formacionescortas.*
+import formacioneslargas.*
+import formacionesrapidas.*
+import ciudades.*
+
 
 	describe "TESTS Trenes"{
 		
 		var deposito = new Deposito()
-		var formacion = new Formacion()
+		var formacion = new FormacionCorta()
 		var locomUtil = new Locomotora()
 		var locomInutil = new Locomotora(pesoArrastre = 2000, velMax = 10)
 		var vagonDeCarga = new VagonCarga()

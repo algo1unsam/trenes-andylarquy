@@ -1,7 +1,8 @@
 class VagonPasajeros{
 	
-	var largo = 10
-	var ancho = 3
+	const property largo = 10
+	const property ancho = 3
+	const property banos = 1
 	
 	
 	method cantidadPasajeros(){
@@ -19,36 +20,30 @@ class VagonPasajeros{
 		
 	}
 	
-	method pesoMaximo(){
-		
-		return self.cantidadPasajeros() * 80
-		
-		
-	}
+	method pesoMaximo() = self.cantidadPasajeros() * 80
+
 	
 	
+	method cantBanos() = banos
 	
+		
 }
+
+
 
 
 class VagonCarga{
 	
+	
 	var cargaMaxima = 1000
 	
 	
-	method pesoMaximo(){
+	method pesoMaximo() = cargaMaxima + 160
+	
+	
+	method cantidadPasajeros() = 0
+	
+	method cantBanos() = 0
 		
-		return cargaMaxima + 160
 		
-	}
-	
-	
-	method cantidadPasajeros(){
-		
-		return 0
-		
-	}
-	
-	
-	
 }

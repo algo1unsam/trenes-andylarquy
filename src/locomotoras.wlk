@@ -7,20 +7,10 @@ class Locomotora{
 	
 	
 	
-	method arrastreUtil(){
+	method arrastreUtil() =  pesoArrastre - peso
 		
-		return pesoArrastre - peso
-		
-	}
-	
 
-	method cantidadPasajeros(){
+	method cantidadPasajeros() = 0
 		
-		return 0
-		
-	}
-	
-	
-	
-	
+			
 }

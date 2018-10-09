@@ -12,31 +12,24 @@ class Deposito{
 	method agregarFormacion(form){
 		
 		formaciones.add(form)
-		
-	}
 	
+	}
 	
 	method quitarForamcion(form){
 		
 		formaciones.remove(form)
 		
 	}
+		
+	
+	
+	method vagonesMasPesados() = formaciones.filter{form => form.max{vagon => vagon.pesoMaximo()}}
+	
+	
+	method conductorExperimentado() = formaciones.any{form => form.esCompleja()}
 	
 	
 	
-	method vagonesMasPesados(){
-		
-		formaciones.filter{form => form.max{vagon => vagon.pesoMaximo()}}
-		
-		
-	}
-	
-	
-	method conductorExperimentado(){
-		
-		return formaciones.any{form => form.esCompleja()}
-		
-	}
 	
 	method agregarLocomAFormacion(formacion){
 		
@@ -54,6 +47,7 @@ class Deposito{
 		}
 		
 	}
+	
 	
 	
 	method agregarLocomSuelta(locom){

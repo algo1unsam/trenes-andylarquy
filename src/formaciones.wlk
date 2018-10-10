@@ -80,7 +80,7 @@ class Formacion{
 		
 	method velMaxLegal()
 	
-	method vagonMasPesado() = vagones.max{vagon => vagon.peso()}
+	method vagonMasPesado() = vagones.max{vagon => vagon.pesoMaximo()}
 	
 	
 

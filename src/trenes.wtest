@@ -34,4 +34,23 @@ import ciudades.*
 			
 		}
 		
+		test "Vagon mas pesado"{
+			
+			var formacion2 = new FormacionCorta()
+			var vagonPesado = new VagonCarga(cargaMaxima = 99999)
+			formacion2.agregarVagon(vagonPesado)
+			formacion2.agregarVagon(vagonDeCarga)
+			
+			
+			
+			formacion.agregarVagon(vagonPesado)
+			formacion.agregarVagon(vagonDeCarga)
+			
+			
+			deposito.agregarFormacion(formacion)
+			deposito.agregarFormacion(formacion2)
+			
+			assert.equals([vagonPesado,vagonPesado],deposito.vagonesMasPesados())			
+		}
+		
 	}

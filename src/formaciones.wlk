@@ -35,8 +35,10 @@ class Formacion{
 	
 	method capacidadPasajeros() = vagones.sum{vagon => vagon.cantidadPasajeros()}
 	
-	method vagonesLivianos() = vagones.count{vagon => vagon.pesoMaximo() < 2500}
 	
+	method vagonesLivianos() = vagones.count{vagon => vagon.esLiviano()}
+	
+	method todosLivianos() = vagones.all{vagon => vagon.esLiviano()}
 	
 	
 	method esEficiente() = locomotoras.all{ locom => ( locom.arrastreUtil() >= (locom.peso() * 5) ) }	
@@ -77,6 +79,8 @@ class Formacion{
 		
 		
 	method velMaxLegal()
+	
+	method vagonMasPesado() = vagones.max{vagon => vagon.peso()}
 	
 	
 

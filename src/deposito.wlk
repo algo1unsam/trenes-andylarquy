@@ -23,7 +23,15 @@ class Deposito{
 		
 	
 	
-	method vagonesMasPesados() = formaciones.filter{form => form.max{vagon => vagon.pesoMaximo()}}
+	method vagonesMasPesados() { 
+	
+		
+		var coleccFinal = []
+	
+		formaciones.forEach{form => coleccFinal.add(form.vagonMasPesado())}
+	
+		return coleccFinal
+	}
 	
 	
 	method conductorExperimentado() = formaciones.any{form => form.esCompleja()}

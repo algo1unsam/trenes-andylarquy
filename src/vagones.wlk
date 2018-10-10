@@ -22,7 +22,7 @@ class VagonPasajeros{
 	
 	method pesoMaximo() = self.cantidadPasajeros() * 80
 
-	
+	method esLiviano() = self.pesoMaximo() < 2500
 	
 	method cantBanos() = banos
 	
@@ -45,5 +45,5 @@ class VagonCarga{
 	
 	method cantBanos() = 0
 		
-		
+	method esLiviano() = self.pesoMaximo() < 2500
 }

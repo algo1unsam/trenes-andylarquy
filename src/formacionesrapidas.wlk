@@ -1,8 +1,8 @@
-import formaciones.*
+import formacioneslargas.*
 
-class FormacionRapida inherits Formacion{
+class FormacionRapida inherits FormacionLarga{
 
-	method estaBienArmada() = (self.velMax() >= 250) && (self.vagonesLivianos())
+	override method estaBienArmada() = super() && (self.velMax() >= 250) && (self.todosLivianos())
 	
 	override method velMaxLegal() = 400
 }
